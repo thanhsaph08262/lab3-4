@@ -1,0 +1,25 @@
+<h5>Post Component</h5>
+<a routerLink="/posts/form" class="btn btn-primary">Create</a>
+<div class="table">
+    <table  class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Action</th>
+            </tr> 
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listPost">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.class}}</td>
+                <td>  
+                  <button (click)="onDelete(item.id)" class="btn btn-danger">Delete</button></td>
+                  <td>  
+                    <button (click)="onUpdate(item)" class="btn btn-danger">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
